@@ -1,3 +1,4 @@
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/riscoBrasil)](https://cran.r-project.org/package=riscoBrasil)
 ## riscoBrasil 
 
 riscoBrasil is a (tiny) R package to load the 'Brazil Risk' data that the Instituto Brasileiro de Geografia e Estatística 

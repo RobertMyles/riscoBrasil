@@ -1,0 +1,41 @@
+---
+title: "Analysing times series with riscoBrasil"
+author: "Robert Myles McDonnell"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Analysing times series with riscoBrasil}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The 'Brazil Risk' numbers, [published daily](http://www.ipeadata.gov.br/ExibeSerie.aspx?serid=40940&module=M) by the [Brazilian Institute of Geography and Statistics](http://www.ibge.gov.br/english/) from JP Morgan's [Emerging Market Bond Index](https://en.wikipedia.org/wiki/JPMorgan_EMBI), are a time-series spanning 1994 to the present, and as such, are a great source of data to use for the teaching of time series in R.
+
+## Forecasting with riscoBrasil
+
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+
+## More Examples
+
+You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(mtcars, 10))
+```
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))
