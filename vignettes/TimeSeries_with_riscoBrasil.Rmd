@@ -13,10 +13,16 @@ The 'Brazil Risk' numbers, [published daily](http://www.ipeadata.gov.br/ExibeSer
 
 ## Forecasting with riscoBrasil
 
+The data returned from `riscoBrasil()` can be used with a variety of packages and functions. In this example, I'll use the well-known forecast package, as well facebook's prophet package.
 
 ```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+if(!require(forecast)) install.packages("forecast"); library(forecast)
+if(!require(prophet)) install.packages("prophet"); library(prophet)
+
+library(riscoBrasil)
+
+series <- riscoBrasil(start = "2002-01-01")
+
 ```
 
 You can enable figure captions by `fig_caption: yes` in YAML:

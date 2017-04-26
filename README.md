@@ -18,9 +18,7 @@ riscoBrasil <- function(start = NULL, end = NULL)
 
 ```
 
-### Examples
-
-riscoBrasil is ideal for simple time series, particularly with ARIMA-style models that posit that the values of a time-series
+These data are then ideal for time series analysis, particularly with ARIMA-style models that posit that the values of a time-series
 are explained mostly by their past values. 
 
 
