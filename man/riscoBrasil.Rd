@@ -13,7 +13,7 @@ riscoBrasil(start = NULL, end = NULL)
 }
 \description{
 Download and parse financial data of J.P. Morgan's 'Brazil Risk',
-maintained by The Brazilian Institute of Geography and Statistics (IBGE).
+maintained by The Brazilian Institute of Geography and Statistics.
 }
 \examples{
 risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
