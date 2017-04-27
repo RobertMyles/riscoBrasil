@@ -15,6 +15,9 @@ riscoBrasil(start = NULL, end = NULL)
 Download and parse financial data of J.P. Morgan's 'Brazil Risk',
 maintained by The Brazilian Institute of Geography and Statistics (IBGE).
 }
+\examples{
+risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
+}
 \author{
 Robert Myles McDonnell
 }

@@ -12,6 +12,8 @@
 #' @param start \code{character}. Optional parameter, must be in "Ymd" format.
 #' @param end \code{character}. Optional parameter, must be in "Ymd" format.
 #' @author Robert Myles McDonnell
+#' @examples
+#' risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
 #' @export
 riscoBrasil <- function(start = NULL, end = NULL){
 
