@@ -28,4 +28,6 @@ ggplot(series, aes(x = date, y = risk)) +
   theme_classic()
 ```
 
+![](http://i.imgur.com/zDL8cZx.png)
+
 For further examples, run `vignette("Analysing times series with riscoBrasil")`.

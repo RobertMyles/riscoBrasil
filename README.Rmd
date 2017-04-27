@@ -45,6 +45,7 @@ ggplot(series, aes(x = date, y = risk)) +
   geom_line(colour = "#1874CD") +
   theme_classic()
 ```
+![](http://i.imgur.com/zDL8cZx.png)
 
 
 For further examples, run `vignette("Analysing times series with riscoBrasil")`. 
