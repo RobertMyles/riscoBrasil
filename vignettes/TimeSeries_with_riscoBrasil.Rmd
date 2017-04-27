@@ -13,35 +13,21 @@ The 'Brazil Risk' numbers, [published daily](http://www.ipeadata.gov.br/ExibeSer
 
 ## Forecasting with riscoBrasil
 
-The data returned from `riscoBrasil()` can be used with a variety of packages and functions. In this example, I'll use the well-known forecast package, as well facebook's prophet package.
+The data returned from `riscoBrasil()` can be used with a variety of packages and functions. In this example, I'll use facebook's new prophet package.
 
 ```{r, fig.show='hold'}
-if(!require(forecast)) install.packages("forecast"); library(forecast)
-if(!require(prophet)) install.packages("prophet"); library(prophet)
-
+if(!require(prophet)) install.packages("prophet", 
+                                       repos = "http://cran.us.r-project.org")
+library(prophet)
 library(riscoBrasil)
 
 series <- riscoBrasil(start = "2002-01-01")
 
+colnames(series) <- c("ds", "y")   # for prophet to work
+model <- prophet(series)
+future <- make_future_dataframe(model, periods = 365)
+forecast <- predict(model, future)
+plot(model, forecast)
 ```
 
-You can enable figure captions by `fig_caption: yes` in YAML:
-
-    output:
-      rmarkdown::html_vignette:
-        fig_caption: yes
-
-Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
-
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
-```
-
-Also a quote using `>`:
-
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+Interestingly, prophet is prophetising an uptick in Brazil Risk. 

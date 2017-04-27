@@ -28,6 +28,7 @@ riscoBrasil <- function(start = NULL, end = NULL){
     slice(-1:-3) %>%
     select(date = 1, risk = 2) %>%
     mutate(date = lubridate::parse_date_time(date, "dmY"),
+           risk = gsub("\\.", "", risk),
            risk = as.numeric(risk))
 
   if(!is.null(start)){
