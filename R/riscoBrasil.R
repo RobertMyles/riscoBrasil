@@ -8,7 +8,7 @@
 #' @importFrom lubridate parse_date_time
 #' @title Download and parse 'Brazil Risk' data
 #' @description Download and parse financial data of J.P. Morgan's 'Brazil Risk',
-#' maintained by The Brazilian Institute of Geography and Statistics (IBGE).
+#' maintained by The Brazilian Institute of Geography and Statistics.
 #' @param start \code{character}. Optional parameter, must be in "Ymd" format.
 #' @param end \code{character}. Optional parameter, must be in "Ymd" format.
 #' @author Robert Myles McDonnell
