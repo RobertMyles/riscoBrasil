@@ -32,7 +32,8 @@ This is not misspelt.
     From: README.md
     Message: Empty URL
 
-I've fixed this now.
+I've fixed this now. There is another issue with a missing URL, but
+this is due to the CRAN badge in the README. 
 
 ## Reverse dependencies
 
