@@ -9,11 +9,13 @@
 #' @title Download and parse 'Brazil Risk' data
 #' @description Download and parse financial data of J.P. Morgan's 'Brazil Risk',
 #' maintained by The Brazilian Institute of Geography and Statistics.
-#' @param start \code{character}. Optional parameter, must be in "Ymd" format.
+#' @param start \code{character}. Optional parameter, must be in "Ymd" (Year-month-day; YYYMMDD) format.
 #' @param end \code{character}. Optional parameter, must be in "Ymd" format.
 #' @author Robert Myles McDonnell
 #' @examples
-#' risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
+#' \dontrun{
+#'  risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
+#'  }
 #' @export
 riscoBrasil <- function(start = NULL, end = NULL){
 

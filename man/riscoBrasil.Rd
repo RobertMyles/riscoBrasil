@@ -7,7 +7,7 @@
 riscoBrasil(start = NULL, end = NULL)
 }
 \arguments{
-\item{start}{\code{character}. Optional parameter, must be in "Ymd" format.}
+\item{start}{\code{character}. Optional parameter, must be in "Ymd" (Year-month-day; YYYMMDD) format.}
 
 \item{end}{\code{character}. Optional parameter, must be in "Ymd" format.}
 }
@@ -16,7 +16,9 @@ Download and parse financial data of J.P. Morgan's 'Brazil Risk',
 maintained by The Brazilian Institute of Geography and Statistics.
 }
 \examples{
-risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
+\dontrun{
+ risk2011 <- riscoBrasil(start = "2011-01-01", end = "2011-12-31")
+ }
 }
 \author{
 Robert Myles McDonnell
