@@ -19,7 +19,7 @@ riscoBrasil is a (tiny) R package to load the 'Brazil Risk' data that the Instit
 
 ### Installation
 
-```{r}
+```{r, eval = F}
 if(!require(devtools)) install.packages("devtools")
 devtools::install_github("RobertMyles/riscoBrasil")
 ```
@@ -63,7 +63,7 @@ The 'Brazil Risk' numbers, [published daily](http://www.ipeadata.gov.br/ExibeSer
 
 The data returned from `riscoBrasil()` can be used with a variety of packages and functions. In this example, I'll use facebook's new prophet package.
 
-```{r, fig.show='hold'}
+```{r, fig.show='hold', results = "hide"}
 if(!require(prophet)) install.packages("prophet", 
                                        repos = "http://cran.us.r-project.org")
 library(prophet)
@@ -75,5 +75,7 @@ colnames(series) <- c("ds", "y")   # for prophet to work
 model <- prophet(series)
 future <- make_future_dataframe(model, periods = 365)
 forecast <- predict(model, future)
+```
+```{r}
 plot(model, forecast)
 ```

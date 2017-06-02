@@ -8,17 +8,7 @@ riscoBrasil is a (tiny) R package to load the 'Brazil Risk' data that the Instit
 
 ``` r
 if(!require(devtools)) install.packages("devtools")
-#> Loading required package: devtools
 devtools::install_github("RobertMyles/riscoBrasil")
-#> Downloading GitHub repo RobertMyles/riscoBrasil@master
-#> from URL https://api.github.com/repos/RobertMyles/riscoBrasil/zipball/master
-#> Installing riscoBrasil
-#> '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
-#>   --no-environ --no-save --no-restore --quiet CMD INSTALL  \
-#>   '/private/var/folders/j5/dg53sh6s5lz3v80h_d8vl9lm0000gn/T/RtmpL39MEz/devtools155c662d801ed/RobertMyles-riscoBrasil-539ca8b'  \
-#>   --library='/Library/Frameworks/R.framework/Versions/3.3/Resources/library'  \
-#>   --install-tests
-#> 
 ```
 
 ### Usage
@@ -57,6 +47,8 @@ if(!require(prophet)) install.packages("prophet",
                                        repos = "http://cran.us.r-project.org")
 #> Loading required package: prophet
 #> Loading required package: Rcpp
+#> Warning: Installed Rcpp (0.12.11) different from Rcpp used to build dplyr (0.12.10).
+#> Please reinstall dplyr to avoid random crashes or undefined behavior.
 library(prophet)
 library(riscoBrasil)
 
@@ -64,12 +56,12 @@ series <- riscoBrasil(start = "2002-01-01")
 
 colnames(series) <- c("ds", "y")   # for prophet to work
 model <- prophet(series)
-#> Initial log joint probability = -37.3105
-#> Optimization terminated normally: 
-#>   Convergence detected: relative gradient magnitude is below tolerance
 future <- make_future_dataframe(model, periods = 365)
 forecast <- predict(model, future)
+```
+
+``` r
 plot(model, forecast)
 ```
 
-![](README-unnamed-chunk-4-1.png)
+![](README-unnamed-chunk-5-1.png)
