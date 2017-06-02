@@ -42,6 +42,7 @@ riscoBrasil <- function(start = NULL, end = NULL){
     risk <- risk %>%
       filter(date >= start)
   }
+
   if(!is.null(end)){
     end <- lubridate::parse_date_time(end, "Ymd")
 

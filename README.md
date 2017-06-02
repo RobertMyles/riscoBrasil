@@ -2,7 +2,7 @@
 riscoBrasil
 -----------
 
-riscoBrasil is a (tiny) R package to load the 'Brazil Risk' data that the Instituto Brasileiro de Geografia e Estatística [IBGE](http://www.ibge.gov.br/english/) maintain publicly from J.P. Morgan's Emerging Markets Bond Index.
+riscoBrasil is a (tiny) R package to load the 'Brazil Risk' data that the Instituto Brasileiro de Geografia e Estatística [IBGE](http://www.ibge.gov.br/english/) maintain publicly from J.P. Morgan's Emerging Markets Bond Index. I was going to put this on CRAN, but I might not get around to satisfying the reqs.
 
 ### Installation
 
